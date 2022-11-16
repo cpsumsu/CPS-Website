@@ -1,3 +1,24 @@
+### 2022.11.16
+[Design]
+
+Home Page - Desktop
+- Modify the Navigation bar
+- Join Us Section
+- Dark Mode
+
+[Link](https://www.figma.com/proto/9ZtJNV3Bs1El4e9A2OqxH3/CPS-Website?page-id=85%3A61&node-id=85%3A62&viewport=458%2C407%2C0.2&scaling=min-zoom) to the figma design.
+
+<details>
+  <summary>showcase / screenshot</summary>
+
+![HomePage-desktop-dark](https://user-images.githubusercontent.com/82365010/202089186-4f0a906c-6a90-4e9d-8b92-d3889f496bc3.png)
+
+
+
+</details>
+
+---
+
 ### 2022.11.13
 [Design]
 
