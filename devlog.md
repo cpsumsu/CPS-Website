@@ -1,3 +1,20 @@
+### 2022.12.3
+[Design]
+
+Turn Desktop into Mobile
+
+[Link for prototype](https://www.figma.com/proto/9ZtJNV3Bs1El4e9A2OqxH3/CPS-Website?page-id=226%3A199&node-id=226%3A200&viewport=782%2C513%2C0.19&scaling=min-zoom)
+
+<details>
+  <summary>showcase / screenshot</summary>
+  
+  <p align="center">
+    <img src="https://user-images.githubusercontent.com/82365010/205448451-aed91288-80c5-4f18-bc0a-3f0e448c6461.png">
+  </p>
+</details>
+
+---
+
 ### 2022.11.16
 [Design]
 
@@ -12,8 +29,6 @@ Home Page - Desktop
   <summary>showcase / screenshot</summary>
 
 ![HomePage-desktop-dark](https://user-images.githubusercontent.com/82365010/202089186-4f0a906c-6a90-4e9d-8b92-d3889f496bc3.png)
-
-
 
 </details>
 
