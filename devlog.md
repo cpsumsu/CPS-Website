@@ -1,7 +1,24 @@
+### 2022.12.12
+[Design]
+
+Turn Light Mode in Mobile Version to Dark Mode
+
+[Link for prototype](https://www.figma.com/proto/9ZtJNV3Bs1El4e9A2OqxH3/CPS-Website?page-id=281%3A2&node-id=281%3A3&viewport=771%2C2649%2C1.15&scaling=min-zoom)
+
+<details>
+  <summary>showcase / screenshot</summary>
+  
+  <p align="center">
+    <img src="https://user-images.githubusercontent.com/82365010/207060264-6cc238c3-7049-45c2-b635-e602282b31fc.png">
+  </p>
+</details>
+
+---
+
 ### 2022.12.3
 [Design]
 
-Turn Desktop into Mobile
+Turn Desktop version into Mobile version
 
 [Link for prototype](https://www.figma.com/proto/9ZtJNV3Bs1El4e9A2OqxH3/CPS-Website?page-id=226%3A199&node-id=226%3A200&viewport=782%2C513%2C0.19&scaling=min-zoom)
 
