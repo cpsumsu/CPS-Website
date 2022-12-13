@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 .title {
-    @apply text-[26px] font-bold text-center
+    @apply text-[26px] font-bold text-center dark:text-white transition duration-500
 }
 
 .description-text {
-    @apply text-base font-bold text-start indent-4 tracking-widest leading-7
+    @apply text-base font-bold text-start indent-4 tracking-widest leading-7 dark:text-descriptionDark transition duration-500
+}
+
+.theme-toggle {
+    @apply bg-white dark:bg-themeDark transition duration-500
+}
+
+.theme-toggle-transition {
+    @apply transition duration-500
 }

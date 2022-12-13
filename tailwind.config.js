@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}'
@@ -11,6 +12,9 @@ module.exports = {
         descriptionDark: '#D6D6D6',
         description: '#818181',
         divider: '#EFEFEF',
+        themeDark: '#333E4E'
+        // themeDark: '#2A3544'
+        // themeDark: '#3D4D59'
       },
       height: {
         'screen': [

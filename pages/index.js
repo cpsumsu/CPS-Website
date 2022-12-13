@@ -25,19 +25,19 @@ export default function Home() {
           <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
         </section>
 
-        <section id="intro" className='snap-center'>
+        <section id="intro" className='snap-center theme-toggle'>
           <Introduction />
         </section>
 
         <Divider />
 
-        <section id="vision" className='snap-center'>
+        <section id="vision" className='snap-center theme-toggle'>
           <Vision />
         </section>
 
         <Divider />
 
-        <section id="join-us" className='snap-center'>
+        <section id="join-us" className='snap-center theme-toggle'>
           <JoinUs />
         </section>
   </>)
