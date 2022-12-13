@@ -54,6 +54,12 @@ export default function Carousel({carousel, width, maxWidth="none", height}) {
       <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
       {/* Images Section*/}
       <Gallery carousel={carousel} currentIndex={currentIndex} />
+      {/* Title and Description */}
+      <div className="absolute top-1/4 px-8 md:px-20 left-0 right-0 z-50 space-y-4">
+        <h1 className='text-4xl font-bold text-white'>{carousel[currentIndex].title}</h1>
+        <p className='text-lg font-bold text-description'>{carousel[currentIndex].description}</p>
+      </div>
+      {/* ProgressBars */}
       <ProgressBars carousel={carousel} currentIndex={currentIndex} progressBar={progressBar} clickHandler={clickHandler}/>
     </div>
   </>)
