@@ -1,3 +1,25 @@
+### 2022.12.13
+[Coding]
+
+Staring with Next.js starter w/ `npx create-next-app@latest` and build up many things as follow
+- Navigation Bar 
+- Light, Dark Model toggle
+- Hero Section / Carousel Section
+- Progress Bar goes by time integrated into the carousel section
+- 3 Title-Description pair sections
+- Most of them of now animated with Framer Motion
+- Mobile Responsive
+
+TODO
+> Still got quite a lot to do with, the navigation bar is now only contain the logo and theme toggler, could add more links into it.
+- Navigation Bar on Desktop
+- Event Cards Section
+- Social Media Section
+- Footer
+- Other routes are needed but not urgent
+
+---
+
 ### 2022.12.12
 [Design]
 
