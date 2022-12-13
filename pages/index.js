@@ -20,25 +20,26 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-      
-        <section id="carousel" className='h-screen snap-start'>
-          <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
-        </section>
+        <main className='theme-toggle'>
+          <section id="carousel" className='h-screen snap-start'>
+            <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
+          </section>
 
-        <section id="intro" className='snap-center theme-toggle'>
-          <Introduction />
-        </section>
+          <section id="intro" className='snap-center section-text-block'>
+            <Introduction />
+          </section>
 
-        <Divider />
+          <Divider />
 
-        <section id="vision" className='snap-center theme-toggle'>
-          <Vision />
-        </section>
+          <section id="vision" className='snap-end md:snap-center section-text-block'>
+            <Vision />
+          </section>
 
-        <Divider />
+          <Divider />
 
-        <section id="join-us" className='snap-center theme-toggle'>
-          <JoinUs />
-        </section>
+          <section id="join-us" className='snap-end md:snap-center section-text-block'>
+            <JoinUs />
+          </section>
+        </main>
   </>)
 }

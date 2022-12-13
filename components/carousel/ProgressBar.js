@@ -1,7 +1,7 @@
 export default function ProgressBar({item, currentIndex, progressBar, clickHandler}) {
   return (
     <li key={item.id} onClick={() => clickHandler(item.id)} className={`col-span-1 w-full cursor-pointer group disable-mobile-press-highlight`}>
-      <h3 className={`text-lg font-bold group-hover:text-white ${currentIndex === item.id ? 'text-white' : 'text-gray-400'}`}>{item.title}</h3>
+      <h3 className={`text-lg md:text-2xl font-bold group-hover:text-white ${currentIndex === item.id ? 'text-white' : 'text-gray-400'}`}>{item.title}</h3>
       <div className={`w-full h-1 md:h-2 bg-neutral-500 transition duration-200 overflow-hidden`}>
         {
           currentIndex === item.id &&

@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.title {
-    @apply text-[26px] font-bold text-center dark:text-white transition duration-500
+.block-title {
+    @apply text-[26px] md:text-5xl font-bold text-center dark:text-white transition duration-500
 }
 
-.description-text {
-    @apply text-base font-bold text-start indent-4 tracking-widest leading-7 dark:text-descriptionDark transition duration-500
+.block-description {
+    @apply text-base md:text-2xl font-bold text-start indent-4 tracking-widest leading-7 md:leading-loose dark:text-descriptionDark transition duration-500
 }
 
 .theme-toggle {
@@ -21,4 +21,12 @@
 .disable-mobile-press-highlight {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
+}
+
+.section-text-block {
+    @apply px-8 md:px-0 py-44 md:max-w-4xl mx-auto
+}
+
+.width-wrapper {
+    @apply md:max-w-7xl mx-auto
 }
