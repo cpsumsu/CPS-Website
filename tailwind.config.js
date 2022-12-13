@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       colors: {
         navbar: '#465E6B',
-        description: '#D6D6D6',
+        descriptionDark: '#D6D6D6',
+        description: '#818181',
+        divider: '#EFEFEF',
       },
       height: {
         'screen': [

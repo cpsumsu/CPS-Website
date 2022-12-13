@@ -1,6 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Carousel from '../components/carousel/Carousel'
+import Introduction from '../components/section/Introduction'
+import Vision from '../components/section/Vision'
+import JoinUs from '../components/section/JoinUs'
+import Divider from '../components/section/Divider'
 
 export default function Home() {
   const carousel = [
@@ -18,14 +21,24 @@ export default function Home() {
         </Head>
 
       
-        <section className='h-screen snap-start'>
+        <section id="carousel" className='h-screen snap-start'>
           <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
         </section>
-        <section className='h-screen snap-start'>
-          <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
+
+        <section id="intro" className='snap-center'>
+          <Introduction />
         </section>
-        <section className='h-screen snap-start'>
-          <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
+
+        <Divider />
+
+        <section id="vision" className='snap-center'>
+          <Vision />
+        </section>
+
+        <Divider />
+
+        <section id="join-us" className='snap-center'>
+          <JoinUs />
         </section>
   </>)
 }

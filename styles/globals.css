@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title {
+    @apply text-[26px] font-bold text-center
+}
+
+.description-text {
+    @apply text-base font-bold text-start indent-4 tracking-widest leading-7
+}
