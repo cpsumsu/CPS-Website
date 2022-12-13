@@ -31,13 +31,13 @@ export default function Home() {
 
           <Divider />
 
-          <section id="vision" className='snap-center md:snap-center section-text-block'>
+          <section id="vision" className='snap-start md:snap-center section-text-block'>
             <Vision />
           </section>
 
           <Divider />
 
-          <section id="join-us" className='snap-center md:snap-center section-text-block'>
+          <section id="join-us" className='snap-start md:snap-center section-text-block'>
             <JoinUs />
           </section>
         </main>
