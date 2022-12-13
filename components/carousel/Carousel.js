@@ -1,5 +1,6 @@
 import {useState, useRef, useEffect} from 'react'
 import Gallery from './Gallery';
+import Header from './Header';
 import ProgressBars from './ProgressBars';
 
 export default function Carousel({carousel, width, maxWidth="none", height}) {
@@ -51,14 +52,11 @@ export default function Carousel({carousel, width, maxWidth="none", height}) {
     {/* Carousel Wrapper */}
     <div className="relative mx-auto overflow-hidden z-20" style={{width: width, height: height, maxWidth: maxWidth}}>
       {/* Image Linear Mask */}
-      <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
+      <div className="absolute inset-0 z-10 bg-black opacity-70"></div>
       {/* Images Section*/}
       <Gallery carousel={carousel} currentIndex={currentIndex} />
       {/* Title and Description */}
-      <div className="absolute top-1/4 px-8 md:px-20 left-0 right-0 z-50 space-y-4">
-        <h1 className='text-4xl font-bold text-white'>{carousel[currentIndex].title}</h1>
-        <p className='text-lg font-bold text-description'>{carousel[currentIndex].description}</p>
-      </div>
+      <Header carousel={carousel} currentIndex={currentIndex} />
       {/* ProgressBars */}
       <ProgressBars carousel={carousel} currentIndex={currentIndex} progressBar={progressBar} clickHandler={clickHandler}/>
     </div>

@@ -24,5 +24,8 @@ export default function Home() {
         <section className='h-screen snap-start'>
           <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
         </section>
+        <section className='h-screen snap-start'>
+          <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
+        </section>
   </>)
 }
