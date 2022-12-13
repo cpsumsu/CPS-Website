@@ -17,3 +17,8 @@
 .theme-toggle-transition {
     @apply transition duration-500
 }
+
+.disable-mobile-press-highlight {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}

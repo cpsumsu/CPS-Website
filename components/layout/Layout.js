@@ -10,7 +10,7 @@ export default function Layout(props) {
   }
 
   return (
-    <div className={`h-screen snap-y snap-proximity scroll-smooth overflow-y-scroll ${darkMode ? 'dark' : ''}`}>
+    <div className={`h-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll ${darkMode ? 'dark' : ''}`}>
         <Navbar darkMode={darkMode} handleThemeToggle={handleThemeToggle}/>
         {props.children}
         <Footer />

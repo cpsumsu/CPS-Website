@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        navbar: '#244C62',
+        // navbar: '#244C62',
         // navbar: '#465E6B',
+        navbar: '#5E7E8F',
+        subHeader: '#AEAEAE',
         descriptionDark: '#D6D6D6',
         description: '#818181',
         divider: '#EFEFEF',
