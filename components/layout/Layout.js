@@ -3,11 +3,9 @@ import Footer from '../Footer';
 
 export default function Layout(props) {
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='h-screen snap-y snap-proximity scroll-smooth overflow-y-scroll'>
         <Navbar />
-        <div className="flex-grow">
-            {props.children}
-        </div>
+        {props.children}
         <Footer />
     </div>
   )
