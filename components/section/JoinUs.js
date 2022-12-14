@@ -15,8 +15,20 @@ export default function JoinUs() {
     },
   }
 
+  const watermarkMotions = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+      }
+    },
+  }
+
   return (
-    <motion.div className="space-y-9"
+    <motion.div className="relative space-y-9 z-10 translate-y-12"
       initial="hidden"
       whileInView="visible"
       viewport={{once: true, amount: 1}}
@@ -29,6 +41,20 @@ export default function JoinUs() {
     <motion.p className="block-description text-description" variants={motions}>
         除此之外，我們也積極地組織開發小組，希望通過使用基礎和貼近最前緣的電腦技術與協同開發實用的項目，令各個成員都能夠實現自我成長。甚至一起創建一個對電腦技術有興趣的本地社群。
     </motion.p>
+
+          {/* Watermark */}
+          <motion.img 
+        className='absolute w-[250px] h-[250px] -top-[200px] -right-[100px] md:bottom-0 md:right-0 md:w-[300px] md:h-[300px] dark:hidden'
+        src={'/joinus-watermark.svg'} 
+        style={{zIndex: -1}}
+        variants={watermarkMotions}
+      />
+      <motion.img 
+        className='hidden absolute w-[250px] h-[250px] -top-[200px] -right-[100px] md:bottom-0 md:right-0 md:w-[300px] md:h-[300px] dark:block'
+        src={'/joinus-watermark.svg'} 
+        style={{zIndex: -1}}
+        variants={watermarkMotions}
+      />
 </motion.div>
   )
 }

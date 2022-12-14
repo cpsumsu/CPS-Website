@@ -18,18 +18,18 @@ export default function Introduction() {
 
   const watermarkMotions = {
     hidden: {
-      opacity: 0
+      opacity: 0,
     },
     visible: {
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: 1,
       }
     },
   }
 
   return (
-    <motion.div className="relative space-y-9 z-10"
+    <motion.div className="relative space-y-9 z-10 translate-y-12"
       initial="hidden"
       whileInView="visible"
       viewport={{once: true, amount: 1}}

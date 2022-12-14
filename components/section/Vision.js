@@ -15,8 +15,20 @@ export default function Vision() {
     },
   }
 
+  const watermarkMotions = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+      }
+    },
+  }
+
   return (
-    <motion.div className="space-y-9"
+    <motion.div className="relative space-y-9 z-10 translate-y-12"
       initial="hidden"
       whileInView="visible"
       viewport={{once: true, amount: 1}}
@@ -29,6 +41,20 @@ export default function Vision() {
       <motion.p className="block-description text-description" variants={motions}>
         同時亦希望同學能體驗各方各面的資訊科技， 從中清晰自己的就業方向。 從踏上it第一步，到擁抱未來更好的自己。
       </motion.p>
+
+      {/* Watermark */}
+      <motion.img 
+        className='absolute w-[250px] h-[250px] -top-[200px] -left-[100px] md:bottom-0 md:left-0 md:w-[300px] md:h-[300px] dark:hidden animate-wiggle'
+        src={'/vision-watermark.svg'} 
+        style={{zIndex: -1}}
+        variants={watermarkMotions}
+      />
+      <motion.img 
+        className='hidden absolute w-[250px] h-[250px] -top-[200px] -left-[100px] md:bottom-0 md:left-0 md:w-[300px] md:h-[300px] dark:block animate-wiggle'
+        src={'/vision-watermark-dark.svg'} 
+        style={{zIndex: -1}}
+        variants={watermarkMotions}
+      />
     </motion.div>
   )
 }

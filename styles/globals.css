@@ -24,7 +24,7 @@
 }
 
 .section-text-block {
-    @apply px-8 md:px-0 py-44 md:max-w-4xl mx-auto
+    @apply px-8 md:px-0 md:max-w-4xl mx-auto h-screen flex items-center
 }
 
 .width-wrapper {

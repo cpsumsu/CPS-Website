@@ -28,7 +28,7 @@ export default function Home() {
             <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
           </section>
 
-          <section id="intro" className='snap-center section-text-block'>
+          <section id="intro" className='snap-end section-text-block'>
             <Introduction />
           </section>
 
