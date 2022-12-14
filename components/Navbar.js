@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -29,6 +29,8 @@ export default function Navbar({darkMode, handleThemeToggle}) {
     }
   };
 
+  const [themeBtnPressed, setThemeBtnPressed] = useState(false);
+
   return (
     <header className='sticky h-0 top-0 w-full z-50'>
       {/* <div className="dark:bg-navbar h-20 px-7 py-5 flex justify-between bg-black/10 backdrop-blur-sm shadow-lg"> */}
@@ -41,10 +43,10 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           <motion.div initial="hidden" animate="visible" variants={rightMotions} transition={{duration: 1.5}}>
           { darkMode 
             ? <>
-                <Image onClick={handleThemeToggle} src={'/sun.svg'} className="active:scale-105 cursor-pointer" alt="Menu" width={40} height={40}/>
+                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/sun.svg'} className={`active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'}`} alt="Menu" width={40} height={40}/>
               </>
             : <>
-                <Image onClick={handleThemeToggle} src={'/moon.svg'} className="active:scale-105 cursor-pointer" alt="Menu" width={40} height={40}/>
+                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/moon.svg'} className={`active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'}`} alt="Menu" width={40} height={40}/>
               </>
           }
           </motion.div>

@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import useBodyScrollLock from '../hooks/useBodyScrollLock'
+
 import Head from 'next/head'
 import Carousel from '../components/carousel/Carousel'
 import Introduction from '../components/section/Introduction'

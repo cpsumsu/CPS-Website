@@ -33,6 +33,18 @@ module.exports = {
         'screen': [
           '100vh','100dvh'
         ]
+      },
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'rotate(0deg) translateY(0px)' },
+          '25%': { transform: 'rotate(-1deg) translateY(-4px)' },
+          '50%': { transform: 'rotate(0deg) translateY(0px)' },
+          '50%': { transform: 'rotate(1deg) translateY(4px)' },
+          '100%': { transform: 'rotate(0deg) translateY(0px)' },
+        },
+      },
+      animation: {
+        'wiggle': 'wiggle 4s linear infinite'
       }
     },
   },

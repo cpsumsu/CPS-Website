@@ -4,7 +4,7 @@ export default function Vision() {
   const motions = {
     hidden: {
       x: -800,
-      opacity: 0.5
+      opacity: 0
     },
     visible: {
       x: 0,

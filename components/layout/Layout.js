@@ -1,6 +1,6 @@
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Layout(props) {
   const [darkMode, setDarkMode] = useState(false);
