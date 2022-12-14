@@ -29,6 +29,21 @@ export default function Navbar({darkMode, handleThemeToggle}) {
     }
   };
 
+  const bulbMotions = {
+    hidden: {
+      y: -100,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 3,
+        duration: 1,
+      }
+    }
+  };
+
   const [themeBtnPressed, setThemeBtnPressed] = useState(false);
 
   return (
@@ -53,6 +68,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
               <li><a href="" className='text-lg text-white font-bold hover:text-gray-200'>關於我們</a></li>
             </ul>
 
+          {/* Theme Toggler For Beyond Mobile Screen */}
           { darkMode 
             ? <>
                 <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/sun.svg'} className={`hidden md:block active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'} w-10 h-10 md:w-8 md:h-8`} alt="Menu" width={40} height={40}/>
@@ -65,10 +81,12 @@ export default function Navbar({darkMode, handleThemeToggle}) {
 
           </motion.div>
 
+          {/* Light Bulb For Mobile Screen*/}
           <motion.div drag dragElastic={0.1} dragConstraints={{top: 0, left: 0, right: 0, bottom:10}} dragDirectionLock
             dragMomentum dragTransition={{ bounceStiffness: 500, bounceDamping: 100 }}
             onDragEnd={handleThemeToggle}
-            className="absolute md:hidden right-8 top-12 cursor-pointer -z-10"
+            initial="hidden" animate="visible" variants={bulbMotions}
+            className={`absolute md:hidden right-8 top-12 cursor-pointer -z-10`}
           >
             <Image className='select-none pointer-events-none' src={"/light-bulb.svg"} width={30} height={70}/>
           </motion.div>
