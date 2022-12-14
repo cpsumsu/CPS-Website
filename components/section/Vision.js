@@ -10,7 +10,7 @@ export default function Vision() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.1,
+        duration: 0.2,
       }
     },
   }
@@ -32,7 +32,7 @@ export default function Vision() {
       initial="hidden"
       whileInView="visible"
       viewport={{once: true, amount: 1}}
-      transition={{staggerChildren: 0.2}}
+      transition={{staggerChildren: 0.15}}
     >
       <motion.h2 className="block-title" variants={motions}>願景</motion.h2>
       <motion.p className="block-description text-description" variants={motions}>
