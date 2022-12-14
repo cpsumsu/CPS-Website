@@ -86,7 +86,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
             dragMomentum dragTransition={{ bounceStiffness: 500, bounceDamping: 100 }}
             onDragEnd={handleThemeToggle}
             initial="hidden" animate="visible" variants={bulbMotions}
-            className={`absolute md:hidden right-8 top-12 cursor-pointer -z-10`}
+            className={`absolute md:hidden right-8 top-12 w-16 cursor-pointer -z-10 flex justify-end`}
           >
             <Image className='select-none pointer-events-none' src={"/light-bulb.svg"} width={30} height={70}/>
           </motion.div>
