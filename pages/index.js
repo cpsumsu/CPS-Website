@@ -4,9 +4,11 @@ import useBodyScrollLock from '../hooks/useBodyScrollLock'
 import Head from 'next/head'
 import Carousel from '../components/carousel/Carousel'
 import Introduction from '../components/section/Introduction'
+import Events from '../components/event/Events'
 import Vision from '../components/section/Vision'
 import JoinUs from '../components/section/JoinUs'
 import Divider from '../components/section/Divider'
+
 
 export default function Home() {
   const carousel = [
@@ -30,6 +32,12 @@ export default function Home() {
 
           <section id="intro" className='snap-end section-text-block'>
             <Introduction />
+          </section>
+
+          <Divider />
+
+          <section id="event" className='snap-end section-text-block'>
+            <Events />
           </section>
 
           <Divider />

@@ -11,6 +11,7 @@ module.exports = {
         // navbar: '#244C62',
         // navbar: '#465E6B',
         navbar: '#5E7E8F',
+        navbarDark: '#425560',
         subHeader: '#AEAEAE',
         descriptionDark: '#D6D6D6',
         description: '#818181',
