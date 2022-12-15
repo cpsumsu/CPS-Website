@@ -1,7 +1,25 @@
+### 2022.12.14
+[Coding]
+
+Doing some minor adjustment, styling and animation:
+- Navigation Bar on different screen sizes
+- Add Watermark on text-based section
+- Also the dark mode version of the watermark
+- Add a light bulb on mobile screen for theme toggle
+- Animated the light bulb, pull to toggle
+- Fix animation bug, probably having a large x, y value will lead to flickering
+
+TODO
+> The Event section need to be done, waiting for the backend to show up. Before that, will be using some dummy data first.
+- Event Cards
+- Animations for the rest of the section
+
+---
+
 ### 2022.12.13
 [Coding]
 
-Staring with Next.js starter w/ `npx create-next-app@latest` and build up many things as follow
+Staring with Next.js starter command w/ `npx create-next-app@latest` and build up many things as follow:
 - Navigation Bar 
 - Light, Dark Model toggle
 - Hero Section / Carousel Section
