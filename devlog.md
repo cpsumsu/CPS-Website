@@ -1,7 +1,24 @@
+### 2022.12.15
+[Coding]
+
+Finish the following:
+- Event Section for both theme
+- Event Card and Styling
+- Contact Us Section for both theme
+- Animation for both Event and Contact Us Section
+
+TODO
+> The Homepage is almost done, the footer is not yet created but not in a hurry. Will focusing on the dynamic routing for the event data first. A base route for all the event cards, and a dynamic event detail page for correcsponding event ID.
+- Dynamic Routing
+- Event Detail Page Design
+- Footer Section
+
+---
+
 ### 2022.12.14
 [Coding]
 
-Doing some minor adjustment, styling and animation:
+Done some minor adjustment, styling and animation:
 - Navigation Bar on different screen sizes
 - Add Watermark on text-based section
 - Also the dark mode version of the watermark
