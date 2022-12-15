@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 import { motion } from 'framer-motion'
 
 export default function Navbar({darkMode, handleThemeToggle}) {
@@ -63,9 +64,9 @@ export default function Navbar({darkMode, handleThemeToggle}) {
             initial="hidden" animate="visible" variants={rightMotions} transition={{duration: 1.5}}
           >
             <ul className='hidden md:flex space-x-6'>
-              <li><a href="" className='text-lg text-white font-bold hover:text-gray-200'>公告</a></li>
-              <li><a href="" className='text-lg text-white font-bold hover:text-gray-200'>活動</a></li>
-              <li><a href="" className='text-lg text-white font-bold hover:text-gray-200'>關於我們</a></li>
+              <li><Link href="#" className='text-lg text-white font-bold hover:text-gray-200'>公告</Link></li>
+              <li><Link href="#" className='text-lg text-white font-bold hover:text-gray-200'>活動</Link></li>
+              <li><Link href="#" className='text-lg text-white font-bold hover:text-gray-200'>關於我們</Link></li>
             </ul>
 
           {/* Theme Toggler For Beyond Mobile Screen */}
