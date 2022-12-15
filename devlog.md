@@ -1,3 +1,60 @@
+### 2022.12.15
+[Coding]
+
+Finish the following:
+- Event Section for both theme
+- Event Card and Styling
+- Contact Us Section for both theme
+- Animation for both Event and Contact Us Section
+
+TODO
+> The Homepage is almost done, the footer is not yet created but not in a hurry. Will focusing on the dynamic routing for the event data first. A base route for all the event cards, and a dynamic event detail page for correcsponding event ID.
+- Dynamic Routing
+- Event Detail Page Design
+- Footer Section
+
+---
+
+### 2022.12.14
+[Coding]
+
+Done some minor adjustment, styling and animation:
+- Navigation Bar on different screen sizes
+- Add Watermark on text-based section
+- Also the dark mode version of the watermark
+- Add a light bulb on mobile screen for theme toggle
+- Animated the light bulb, pull to toggle
+- Fix animation bug, probably having a large x, y value will lead to flickering
+
+TODO
+> The Event section need to be done, waiting for the backend to show up. Before that, will be using some dummy data first.
+- Event Cards
+- Animations for the rest of the section
+
+---
+
+### 2022.12.13
+[Coding]
+
+Staring with Next.js starter command w/ `npx create-next-app@latest` and build up many things as follow:
+- Navigation Bar 
+- Light, Dark Model toggle
+- Hero Section / Carousel Section
+- Progress Bar goes by time integrated into the carousel section
+- 3 Title-Description pair sections
+- Most of them of now animated with Framer Motion
+- Mobile Responsive
+
+TODO
+> Still got quite a lot to do with, the navigation bar is now only contain the logo and theme toggler, could add more links into it.
+- Navigation Bar on Desktop
+- Event Cards Section
+- Social Media Section
+- Footer
+- Other routes are needed but not urgent
+
+---
+
 ### 2022.12.12
 [Design]
 

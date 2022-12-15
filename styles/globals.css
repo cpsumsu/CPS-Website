@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.block-title {
+    @apply text-[26px] md:text-5xl font-bold text-center dark:text-white transition duration-500
+}
+
+.block-description {
+    @apply text-base md:text-2xl font-bold text-start indent-4 tracking-widest leading-7 md:leading-loose dark:text-descriptionDark transition duration-500
+}
+
+.theme-toggle {
+    @apply bg-gray-100 dark:bg-themeDark transition duration-500
+}
+
+.theme-toggle-transition {
+    @apply transition duration-500
+}
+
+.disable-mobile-press-highlight {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.section-text-block {
+    @apply px-8 md:px-20 md:max-w-4xl mx-auto min-h-screen flex items-center
+}
+
+.width-wrapper {
+    @apply md:max-w-7xl mx-auto
+}
