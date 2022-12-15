@@ -71,13 +71,14 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           {/* Theme Toggler For Beyond Mobile Screen */}
           { darkMode 
             ? <>
-                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/sun.svg'} className={`hidden md:block active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'} w-10 h-10 md:w-8 md:h-8`} alt="Menu" width={40} height={40}/>
+                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/sun.svg'} className={`hidden md:block active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'} w-10 h-10 md:w-8 md:h-8`} alt="Light Theme Button" width={40} height={40}/>
               </>
             : <>
-                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/moon.svg'} className={`hidden md:block active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'} w-10 h-10 md:w-8 md:h-8`} alt="Menu" width={40} height={40}/>
+                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/moon.svg'} className={`hidden md:block active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'} w-10 h-10 md:w-8 md:h-8`} alt="Dark Theme Button" width={40} height={40}/>
               </>
           }
-                <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/hamburger.svg'} className={`md:hidden active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'}`} alt="Menu" width={30} height={30}/>
+          
+          <Image onClick={() => {handleThemeToggle(); setThemeBtnPressed(true)}} src={'/hamburger.svg'} className={`md:hidden active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'}`} alt="Menu Button" width={30} height={30}/>
 
           </motion.div>
 
@@ -88,7 +89,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
             initial="hidden" animate="visible" variants={bulbMotions}
             className={`absolute md:hidden right-8 top-12 w-16 cursor-pointer -z-10 flex justify-end`}
           >
-            <Image className='select-none pointer-events-none' src={"/light-bulb.svg"} width={30} height={70}/>
+            <Image className='select-none pointer-events-none' src={"/light-bulb.svg"} alt="Light Bulb" width={30} height={70}/>
           </motion.div>
 
         </div>

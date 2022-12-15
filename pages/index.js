@@ -7,6 +7,7 @@ import Introduction from '../components/section/Introduction'
 import Events from '../components/event/Events'
 import Vision from '../components/section/Vision'
 import JoinUs from '../components/section/JoinUs'
+import ContactUs from '../components/section/ContactUs'
 import Divider from '../components/section/Divider'
 
 
@@ -36,7 +37,7 @@ export default function Home() {
 
           <Divider />
 
-          <section id="event" className='snap-end section-text-block'>
+          <section id="event" className='snap-end md:px-0 md:max-w-4xl mx-auto min-h-screen flex items-center'>
             <Events />
           </section>
 
@@ -50,6 +51,12 @@ export default function Home() {
 
           <section id="join-us" className='snap-start md:snap-center section-text-block'>
             <JoinUs />
+          </section>
+
+          <Divider />
+
+          <section id="contact-us" className='snap-start md:snap-center section-text-block'>
+            <ContactUs />
           </section>
         </main>
   </>)
