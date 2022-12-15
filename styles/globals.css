@@ -11,7 +11,7 @@
 }
 
 .theme-toggle {
-    @apply bg-white dark:bg-themeDark transition duration-500
+    @apply bg-gray-100 dark:bg-themeDark transition duration-500
 }
 
 .theme-toggle-transition {

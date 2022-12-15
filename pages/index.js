@@ -37,7 +37,7 @@ export default function Home() {
 
           <Divider />
 
-          <section id="event" className='snap-end md:px-0 md:max-w-4xl mx-auto min-h-screen flex items-center'>
+          <section id="event" className='snap-end md:px-0 md:max-w-7xl mx-auto min-h-screen flex items-center'>
             <Events />
           </section>
 

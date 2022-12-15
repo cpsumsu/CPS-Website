@@ -7,8 +7,8 @@ export default function EventCards({ events }) {
   }
 
   return (
-    <div className="w-full px-8 md:px-20">
-      <ul className='flex space-x-8 py-6 w-full'>
+    <div className="w-full">
+      <ul className='flex space-x-8 py-6 before:shrink-0 before:w-8 after:shrink-0 after:w-8 md:before:w-20 md:after:w-20'>
         {events.map(event => {
           return (
             <li key={event.id} className="shrink-0 snap-center">

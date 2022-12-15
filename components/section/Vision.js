@@ -44,13 +44,13 @@ export default function Vision() {
 
       {/* Watermark */}
       <motion.img 
-        className='absolute w-[250px] h-[250px] -top-[200px] -left-[100px] md:bottom-0 md:left-0 md:w-[300px] md:h-[300px] dark:hidden animate-wiggle'
+        className='absolute w-[250px] h-[250px] -top-[150px] -left-[100px] md:bottom-0 md:left-0 md:w-[300px] md:h-[300px] dark:hidden animate-wiggle'
         src={'/vision-watermark.svg'} 
         style={{zIndex: -1}}
         variants={watermarkMotions}
       />
       <motion.img 
-        className='hidden absolute w-[250px] h-[250px] -top-[200px] -left-[100px] md:bottom-0 md:left-0 md:w-[300px] md:h-[300px] dark:block animate-wiggle'
+        className='hidden absolute w-[250px] h-[250px] -top-[150px] -left-[100px] md:bottom-0 md:left-0 md:w-[300px] md:h-[300px] dark:block animate-wiggle'
         src={'/vision-watermark-dark.svg'} 
         style={{zIndex: -1}}
         variants={watermarkMotions}
