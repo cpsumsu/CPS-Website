@@ -12,6 +12,11 @@ export default function EventCard({event, tagColor}) {
         <p className="text-lg font-bold dark:text-white">{event.name}</p>
         <p className="text-sm font-semibold text-neutral-400">{event.leader}</p>
       </div>
+
+      {/* Event Date - Absolute */}
+      <div className="absolute top-3 right-3 bg-white/90 dark:bg-navbarDark/50 backdrop-blur-sm px-3 py-2 rounded-md text-base dark:text-white font-bold">
+        <p>{event.date}</p>
+      </div>
     </div>
   )
 }
