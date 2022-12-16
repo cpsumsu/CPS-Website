@@ -32,11 +32,11 @@ export default function ContactUs() {
   }
 
   const socialMedias = [
-    {id: 0, name: 'youtube', imageUrl: '/sm-youtube.svg', url: 'https://www.youtube.com/@cpsumsu1903'},
-    {id: 1, name: 'facebook', imageUrl: '/sm-facebook.svg', url: 'https://www.facebook.com/cps.umsu/'},
-    {id: 2, name: 'instagram', imageUrl: '/sm-instagram.svg', url: 'https://www.instagram.com/cps.umsu/'},
-    {id: 3, name: 'github', imageUrl: '/sm-github.svg', url: 'https://github.com/cpsumsu'},
-    {id: 4, name: 'discord', imageUrl: '/sm-discord.svg', url: 'https://discord.gg/DnRsuvYqCf'},
+    {id: 0, name: 'youtube', imageUrl: '/social_media/sm-youtube.svg', url: 'https://www.youtube.com/@cpsumsu1903'},
+    {id: 1, name: 'facebook', imageUrl: '/social_media/sm-facebook.svg', url: 'https://www.facebook.com/cps.umsu/'},
+    {id: 2, name: 'instagram', imageUrl: '/social_media/sm-instagram.svg', url: 'https://www.instagram.com/cps.umsu/'},
+    {id: 3, name: 'github', imageUrl: '/social_media/sm-github.svg', url: 'https://github.com/cpsumsu'},
+    {id: 4, name: 'discord', imageUrl: '/social_media/sm-discord.svg', url: 'https://discord.gg/DnRsuvYqCf'},
   ];
 
   return (
