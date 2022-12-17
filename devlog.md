@@ -1,3 +1,12 @@
+### 2022.12.16
+[Coding]
+
+Styling and Refactoring:
+- Date Tag on the Event Card
+- Restructure the Images folder into more well organized
+- Footer Section for both desktop and mobile
+
+
 ### 2022.12.15
 [Coding]
 
