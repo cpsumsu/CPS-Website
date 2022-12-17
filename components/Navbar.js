@@ -79,7 +79,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           <motion.div className='flex items-center space-x-4'
             initial="hidden" animate="visible" variants={leftMotions} transition={{duration: 1.5}}
           >
-            <Image src={'/icons/logo.svg'} alt="Logo" className="active:scale-105 cursor-pointer" width={40} height={40}/>
+            <Image src={'/icons/logo.svg'} alt="Logo" className="active:scale-105 cursor-pointer" width={40} height={40} priority={true}/>
             <a className="hidden md:block lg:hidden text-3xl text-white font-mono cursor-pointer">CPSUMSU</a>
             <a className="hidden lg:block text-2xl text-white font-bold font-mono self-end cursor-pointer select-none active:scale-[102%]">澳門大學電腦學會</a>
           </motion.div>
@@ -104,7 +104,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           }
           
           {/* Mobile Hamburger */}
-          <Image id='hamburger-menu' onClick={(e) => {setShowMenu(prev => !prev);}} src={'/icons/hamburger.svg'} className={`md:hidden active:scale-105 cursor-pointer ${themeBtnPressed ? '' : 'animate-pulse'}`} alt="Menu Button" width={30} height={30}/>
+          <Image id='hamburger-menu' onClick={(e) => {setShowMenu(prev => !prev);}} src={'/icons/hamburger.svg'} className={`md:hidden active:scale-105 cursor-pointer`} alt="Menu Button" width={30} height={30} quality={100} priority={true}/>
 
           </motion.div>
 
