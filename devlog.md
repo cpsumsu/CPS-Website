@@ -1,3 +1,13 @@
+### 2022.12.17
+[Coding]
+
+Styling Event Card and Add Mobile Menu:
+- Using Image component from nextjs (auto compress the size of images)
+- Customize the blur loading effect for Event Card image
+- Create Pop up modal for mobile menu
+
+---
+
 ### 2022.12.16
 [Coding]
 
@@ -6,6 +16,7 @@ Styling and Refactoring:
 - Restructure the Images folder into more well organized
 - Footer Section for both desktop and mobile
 
+---
 
 ### 2022.12.15
 [Coding]
