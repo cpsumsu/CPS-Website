@@ -1,3 +1,18 @@
+### 2022.12.18
+[Design]
+
+Designs for All Event Page and Event Detail Page
+<details>
+  <summary>showcase / screenshot</summary>
+  
+  <p align="center">
+    <img src="https://user-images.githubusercontent.com/82365010/208307955-e1ed3685-c903-4ded-b383-3624b7faccf9.png">
+    <img src="https://user-images.githubusercontent.com/82365010/208307973-7cb233ca-3357-4cd3-8b1a-f313efe752e8.png">
+  </p>
+</details>
+
+---
+
 ### 2022.12.17
 [Coding]
 
