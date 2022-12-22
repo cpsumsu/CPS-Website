@@ -10,7 +10,7 @@ import Divider from '../components/section/Divider'
 
 export default function Home() {
   const carousel = [
-    {id: 0, title: "科普推廣", description: "通過舉辦工作坊，用簡單明了的語言讓沒有相關基礎的同學也可以參與。再輔以實際操作，小白也能輕鬆上手。", alt: "科普推廣", imgURL: "https://cpsumsu.org/static/image/slideshow/slideshow_p3.jpg"},
+    {id: 0, title: "科普推廣", description: "致力舉辦工作坊，用簡單易懂的教學方式讓沒有相關基礎的同學也可以參與。再輔以實際操作，小白也能輕鬆上手。", alt: "科普推廣", imgURL: "https://cpsumsu.org/static/image/slideshow/slideshow_p3.jpg"},
     {id: 1, title: "培養人才", description: "通過比賽及工作坊等活動，提高同學各方面的能力，了解行業的發展，進而提升競爭力。", alt: "培養人才", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-6.jpg"},
     {id: 2, title: "軟硬實力", description: "學會不僅著重硬實力，亦會創造機會，著重培養同學的溝通、表達和學習能力", alt: "軟硬實力", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-1.jpg"},
     {id: 3, title: "勞逸結合", description: "除了提升能力外，學會亦定期舉辦各種活動來讓各同學得到放鬆並且促進成員之間的溝通。", alt: "勞逸結合", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-3.jpg"},

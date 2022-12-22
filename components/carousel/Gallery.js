@@ -8,8 +8,9 @@ export default function Gallery({carousel, currentIndex}) {
         return (
           <li key={item.id} className="relative w-full h-full shrink-0">
             {/* Image Linear Mask */}
-            <div className="absolute inset-0 z-10 bg-black opacity-60"></div>
-            <Image key={item.id} className="object-cover h-full w-full blur-sm" src={item.imgURL} alt={item.alt} quality={100} fill priority={true}/>
+            <div className="absolute inset-0 z-10 bg-black opacity-40"></div>
+            <div className="absolute inset-0 z-10 backdrop-blur-[8px]"></div>
+            <Image key={item.id} className="object-cover h-full w-full" src={item.imgURL} alt={item.alt} quality={100} fill priority={true}/>
           </li>
         )
       })}
