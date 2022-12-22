@@ -6,6 +6,7 @@ export default function EventCards({ events }) {
   const tagColor = {
     '比賽': '#E5A0A0',
     '工作坊': '#7AC2B1',
+    '分享會': '#FFA430',
   }
 
   const motions = {
@@ -29,7 +30,7 @@ export default function EventCards({ events }) {
           return (
             <motion.li key={event.id} className="shrink-0 snap-center" variants={motions}>
               <Link href="#">
-                <EventCard event={event} tagColor={tagColor}/>
+                <EventCard event={event} tagColor={tagColor} width={250}/>
               </Link>
             </motion.li>
           )

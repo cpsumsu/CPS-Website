@@ -6,7 +6,7 @@ export default function BlurImage({ src, alt, width, height }) {
 
 	return (
 		<Image src={src} width={width} height={height} alt={alt}
-			className={`object-cover w-64 h-64 bg-gray-300 transition duration-500 ${isLoading ? 'grayscale blur-2xl scale-110 animate-pulse' : 'grayscale-0 blur-0 scale-100'}`}
+			className={`object-cover w-64 h-64 bg-gray-300 rounded-t-lg transition duration-500 ${isLoading ? 'grayscale blur-2xl scale-110 animate-pulse' : 'grayscale-0 blur-0 scale-100'}`}
 			onLoadingComplete={() => setIsLoading(false)}
 		/>
 	)
