@@ -1,3 +1,11 @@
+### 2022.12.22
+[Coding]
+
+Shifting the event card data from dummy data to API calls, update the subheader on the carousel and an extra blur layer on banner.
+
+
+---
+
 ### 2022.12.18
 [Design]
 
