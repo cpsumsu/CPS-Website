@@ -77,7 +77,8 @@ export async function getStaticProps(context) {
   return { 
     props: {
       events: events,
-    }
+    },
+    revalidate: 60 * 30, // Re-generate the page every 30 mins
   };
 }
 
