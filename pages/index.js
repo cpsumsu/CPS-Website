@@ -1,6 +1,3 @@
-import { useEffect } from 'react'
-import useBodyScrollLock from '../hooks/useBodyScrollLock'
-
 import Head from 'next/head'
 import Carousel from '../components/carousel/Carousel'
 import Introduction from '../components/section/Introduction'
@@ -11,13 +8,22 @@ import ContactUs from '../components/section/ContactUs'
 import Divider from '../components/section/Divider'
 
 
-export default function Home() {
+export default function Home(props) {
   const carousel = [
-    {id: 0, title: "提升競爭力", description: "透過各方面容易入手且點滿知識性的活動，培養出對電腦行業有一定基礎的小草苗。", alt: "image 1", imgURL: "https://www.cpsumsu.org/static/image/slideshow/slideshow_p1.jpg"},
-    {id: 1, title: "培養人才", description: "透過各方面容易入手且點滿知識性的活動，培養出對電腦行業有一定基礎的小草苗。", alt: "image 2", imgURL: "https://www.cpsumsu.org/static/image/slideshow/slideshow_p2.jpg"},
-    {id: 2, title: "軟硬實力", description: "透過各方面容易入手且點滿知識性的活動，培養出對電腦行業有一定基礎的小草苗。", alt: "image 3", imgURL: "https://www.cpsumsu.org/static/image/slideshow/slideshow_p3.jpg"},
-    {id: 3, title: "勞逸結合", description: "透過各方面容易入手且點滿知識性的活動，培養出對電腦行業有一定基礎的小草苗。", alt: "image 3", imgURL: "https://www.cpsumsu.org/static/image/slideshow/slideshow_p1.jpg"},
+    {id: 0, title: "科普推廣", description: "致力舉辦工作坊，用簡單易懂的教學方式讓沒有相關基礎的同學也可以參與。再輔以實際操作，小白也能輕鬆上手。", alt: "科普推廣", imgURL: "https://cpsumsu.org/static/image/slideshow/slideshow_p3.jpg"},
+    {id: 1, title: "培養人才", description: "通過比賽及工作坊等活動，提高同學各方面的能力，了解行業的發展，進而提升競爭力。", alt: "培養人才", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-6.jpg"},
+    {id: 2, title: "軟硬實力", description: "學會不僅著重硬實力，亦會創造機會，著重培養同學的溝通、表達和學習能力", alt: "軟硬實力", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-1.jpg"},
+    {id: 3, title: "勞逸結合", description: "除了提升能力外，學會亦定期舉辦各種活動來讓各同學得到放鬆並且促進成員之間的溝通。", alt: "勞逸結合", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-3.jpg"},
   ];
+
+  // const events = [
+  //   { id: 1, name: "網頁設計工作坊-前端", leader: "KaLok, Tony, Kelvin", date:"9 Apr, 2022", type: "工作坊", imageUrl: "https://cpsumsu.org/static/image/event/1_python_workshop_2022.png" },
+  //   { id: 2, name: "遊戲設計工作坊", leader: "Tom", date:"26 Mar, 2022", type: "工作坊", imageUrl: "https://cpsumsu.org/static/image/event/3_game_design_workshop_2022.png" },
+  //   { id: 3, name: "網絡安全-職業分享會", leader: "Kelvin", date:"8 Jan, 2022", type: "工作坊", imageUrl: "https://cpsumsu.org/static/image/event/2_career_sharing_2021.png" },
+  //   { id: 4, name: "英雄聯盟澳大杯", leader: "Wilson, Sunny,Ah Mo", date:"7 Oct, 2021", type: "比賽", imageUrl: "https://cpsumsu.org/static/image/event/4_LOL_Cup_2022.png" },
+  // ];
+
+  const { events } = props;
 
   return (<>
         <Head>
@@ -38,7 +44,7 @@ export default function Home() {
           <Divider />
 
           <section id="event" className='snap-end md:px-0 md:max-w-7xl mx-auto min-h-screen flex items-center'>
-            <Events />
+            <Events events={events}/>
           </section>
 
           <Divider />
@@ -60,4 +66,49 @@ export default function Home() {
           </section>
         </main>
   </>)
+}
+
+export async function getStaticProps(context) {
+  const API_URL = process.env.EVENT_API_URL;
+  let raw = await fetch(API_URL);
+  raw = await raw.json();
+  const events = shapeData(raw.data);
+
+  return { 
+    props: {
+      events: events,
+    },
+    revalidate: 60 * 30, // Re-generate the page every 30 mins
+  };
+}
+
+function shapeData (events) {
+  return events.map(event => {
+    const leader = concateArrayWithNullCheck([event.leaders, event.organizers]);
+    const date = new Date(event.date).toLocaleDateString('en-us', {day: "numeric", month: "short", year:"numeric"});
+
+    return {
+      ...event,
+      type: event.event_type,
+      leader: leader,
+      imageUrl: event.image,
+      date: date
+    };
+  })
+}
+
+function concateArrayWithNullCheck(param) {
+  let newArray = new Array();
+
+  param.forEach(array => {
+    if (!array) return;
+
+    newArray = newArray.concat(array);
+  });
+
+  return newArray.length
+    ?  newArray.map(leader => {
+        return leader.name;
+      }).join(', ')
+    : null
 }

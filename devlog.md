@@ -1,3 +1,57 @@
+### 2022.12.26
+[Coding]
+
+After updating the API from the backend, the data is much more clean and easy to handle.
+- Update the data from API
+- Add fallback empty space for leaders name on card
+- truncate the event name on card
+
+The update of styles are trying to maintain the same card size in all situation. Like when the event name is too long and wrap to an new line, or the leader name is empty which shrink the height. So that we can prevent the above cases.
+
+---
+
+### 2022.12.22
+[Coding]
+
+Shifting the event card data from dummy data to API calls, update the subheader on the carousel and an extra blur layer on banner.
+
+---
+
+### 2022.12.18
+[Design]
+
+Designs for All Event Page and Event Detail Page
+<details>
+  <summary>showcase / screenshot</summary>
+  
+  <p align="center">
+    <img src="https://user-images.githubusercontent.com/82365010/208307955-e1ed3685-c903-4ded-b383-3624b7faccf9.png">
+    <img src="https://user-images.githubusercontent.com/82365010/208307973-7cb233ca-3357-4cd3-8b1a-f313efe752e8.png">
+  </p>
+</details>
+
+---
+
+### 2022.12.17
+[Coding]
+
+Styling Event Card and Add Mobile Menu:
+- Using Image component from nextjs (auto compress the size of images)
+- Customize the blur loading effect for Event Card image
+- Create Pop up modal for mobile menu
+
+---
+
+### 2022.12.16
+[Coding]
+
+Styling and Refactoring:
+- Date Tag on the Event Card
+- Restructure the Images folder into more well organized
+- Footer Section for both desktop and mobile
+
+---
+
 ### 2022.12.15
 [Coding]
 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 export default function JoinUs() {
   const motions = {
     hidden: {
-      x: 800,
+      x: 400,
       opacity: 0
     },
     visible: {
@@ -45,13 +45,13 @@ export default function JoinUs() {
       {/* Watermark */}
       <motion.img 
         className='absolute w-[250px] h-[250px] -top-[180px] md:-top-[250px] -right-[100px] md:bottom-0 md:right-0 md:w-[300px] md:h-[300px] dark:hidden animate-wiggle'
-        src={'/joinus-watermark.svg'} 
+        src={'/watermarks/joinus-watermark.svg'} 
         style={{zIndex: -1}}
         variants={watermarkMotions}
       />
       <motion.img 
         className='hidden absolute w-[250px] h-[250px] -top-[180px] md:-top-[250px] -right-[100px] md:bottom-0 md:right-0 md:w-[300px] md:h-[300px] dark:block animate-wiggle'
-        src={'/joinus-watermark-dark.svg'} 
+        src={'/watermarks/joinus-watermark-dark.svg'} 
         style={{zIndex: -1}}
         variants={watermarkMotions}
       />
