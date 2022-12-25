@@ -1,8 +1,19 @@
+### 2022.12.26
+[Coding]
+
+After updating the API from the backend, the data is much more clean and easy to handle.
+- Update the data from API
+- Add fallback empty space for leaders name on card
+- truncate the event name on card
+
+The update of styles are trying to maintain the same card size in all situation. Like when the event name is too long and wrap to an new line, or the leader name is empty which shrink the height. So that we can prevent the above cases.
+
+---
+
 ### 2022.12.22
 [Coding]
 
 Shifting the event card data from dummy data to API calls, update the subheader on the carousel and an extra blur layer on banner.
-
 
 ---
 
