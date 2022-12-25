@@ -84,14 +84,31 @@ export async function getStaticProps(context) {
 
 function shapeData (events) {
   return events.map(event => {
-    const type = event.event_type.name;
-    const leadersAndOrganizes = event.leaders.concat(event.organizes);
-    let leader = leadersAndOrganizes.map(function(leader) {
-      return leader.name;
-    }).join(', ');
-    const imageUrl = `${process.env.IMAGE_URL}${event.image}`;
+    const leader = concateArrayWithNullCheck([event.leaders, event.organizers]);
     const date = new Date(event.date).toLocaleDateString('en-us', {day: "numeric", month: "short", year:"numeric"});
 
-    return {...event, type, leader, imageUrl, date};
+    return {
+      ...event,
+      type: event.event_type,
+      leader: leader,
+      imageUrl: event.image,
+      date: date
+    };
   })
+}
+
+function concateArrayWithNullCheck(param) {
+  let newArray = new Array();
+
+  param.forEach(array => {
+    if (!array) return;
+
+    newArray = newArray.concat(array);
+  });
+
+  return newArray.length
+    ?  newArray.map(leader => {
+        return leader.name;
+      }).join(', ')
+    : null
 }
