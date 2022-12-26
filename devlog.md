@@ -1,4 +1,4 @@
-### 2022.12.26
+### 2022.12.25
 [Coding]
 
 After updating the API from the backend, the data is much more clean and easy to handle.

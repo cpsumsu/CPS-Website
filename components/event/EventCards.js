@@ -25,7 +25,7 @@ export default function EventCards({ events }) {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       { 
         events
         ? <ul className='flex space-x-8 py-6 before:shrink-0 before:w-8 after:shrink-0 after:w-8 md:before:w-20 md:after:w-20'>
@@ -39,13 +39,13 @@ export default function EventCards({ events }) {
               )
             })}
           </ul>
-        : <div className="flex flex-col items-center gap-y-4 h-full my-8 px-8 text-center">
+        : <motion.div className="flex flex-col items-center gap-y-4 h-full my-8 px-8 text-center animate-wiggle" variants={motions}>
             <div className="text-navbarDark dark:text-sky-200 backdrop-blur-md">
-              <p className="md:hidden text-2xl">個Server好似迷路了，<br/>一陣再試下啦！</p>
-              <p className="hidden md:block text-4xl">個Server好似迷路了，一陣再試下啦！</p>
+              <p className="md:hidden text-2xl">個Server好似迷咗路，<br/>一陣再試下啦！</p>
+              <p className="hidden md:block text-4xl">個Server好似迷咗路，一陣再試下啦！</p>
             </div>
             <Image src={'/404.png'} className="object-cover" width={500} height={350} />
-          </div>
+          </motion.div>
       }
     </div>
   )

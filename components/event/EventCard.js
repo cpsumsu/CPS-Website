@@ -4,7 +4,7 @@ export default function EventCard({event, tagColor, width}) {
   const EMPTY = '\u00A0';
 
   return (
-    <div className='relative rounded-lg shadow-lg dark:shadow-md dark:shadow-slate-800 overflow-hidden hover:scale-[105%] hover:shadow-md duration-300' style={{width: `${width}px`}}>
+    <div className='relative rounded-lg shadow-lg dark:shadow-md dark:shadow-slate-800 overflow-hidden md:hover:scale-[105%] md:hover:shadow-md duration-300' style={{width: `${width}px`}}>
       <BlurImage src={event.imageUrl} width={width} height={300} alt={event.name}/>
       {/* Card Content */}
       <div className="px-6 py-4 space-y-1 bg-gray-100 dark:bg-cardDark duration-300">
