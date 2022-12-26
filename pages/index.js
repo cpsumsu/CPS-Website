@@ -70,9 +70,16 @@ export default function Home(props) {
 
 export async function getStaticProps(context) {
   const API_URL = process.env.EVENT_API_URL;
-  let raw = await fetch(API_URL);
-  raw = await raw.json();
-  const events = shapeData(raw.data);
+  let events;
+
+  try {
+    let raw = await fetch(API_URL);
+    raw = await raw.json();
+    events = shapeData(raw.data);
+  }
+  catch {
+    events = null;
+  }
 
   return { 
     props: {
