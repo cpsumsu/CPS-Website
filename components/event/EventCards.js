@@ -33,7 +33,7 @@ export default function EventCards({ events }) {
               return (
                 <motion.li key={event.id} className="shrink-0 snap-center" variants={motions}>
                   <Link href="#">
-                    <EventCard event={event} tagColor={tagColor} width={250}/>
+                    <EventCard event={event} tagColor={tagColor} width={280}/>
                   </Link>
                 </motion.li>
               )
