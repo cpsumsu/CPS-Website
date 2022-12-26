@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import EventCard from "./EventCard"
 
@@ -39,8 +40,8 @@ export default function AllEvents({events}) {
       // transition={{staggerChildren: 0.15}}
     >
       <motion.div className="flex justify-between items-baseline" variants={motions}>
-        <h2 className='text-xl md:text-3xl font-bold dark:text-white duration-300'>最近活動</h2>
-        <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link>
+        <h2 className='text-xl md:text-3xl font-bold dark:text-white duration-300'>全部活動</h2>
+        {/* <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link> */}
       </motion.div>
       <div className="flex justify-center w-full scrollbar-none">
         {
