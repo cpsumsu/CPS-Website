@@ -1,7 +1,12 @@
 import BlurImage from "./BlurImage"
 
-export default function EventCard({event, tagColor, width}) {
+export default function EventCard({event, width}) {
   const EMPTY = '\u00A0';
+  const tagColor = {
+    '比賽': '#E5A0A0',
+    '工作坊': '#7AC2B1',
+    '分享會': '#FFA430',
+  }
 
   return (
     <div className='relative rounded-lg shadow-lg dark:shadow-md dark:shadow-slate-800 overflow-hidden md:hover:scale-[105%] md:hover:shadow-md duration-300' style={{width: `${width}px`}}>

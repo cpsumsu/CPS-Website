@@ -91,7 +91,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           >
             <ul className='hidden md:flex space-x-6'>
               {menuItems.map(item => (
-                <li><Link href={item.url} className="text-lg text-white font-bold hover:text-gray-200">{item.name}</Link></li>
+                <li key={item.id}><Link href={item.url} className="text-lg text-white font-bold hover:text-gray-200">{item.name}</Link></li>
               ))}
             </ul>
 
@@ -125,8 +125,8 @@ export default function Navbar({darkMode, handleThemeToggle}) {
             <div className="flex justify-center menu">
               <ul className='text-center w-full cursor-pointer py-1'>
                 {menuItems.map(item => 
-                  <Link href={item.url}>
-                    <li key={item.id} className="py-3 active:bg-gray-300 font-bold">
+                  <Link key={item.id} href={item.url}>
+                    <li className="py-3 active:bg-gray-300 font-bold">
                         {item.name}
                     </li>
                   </Link>

@@ -28,7 +28,7 @@
 }
 
 .width-wrapper {
-    @apply md:max-w-7xl mx-auto
+    @apply md:max-w-[1400px] mx-auto
 }
 
 .menu::before {

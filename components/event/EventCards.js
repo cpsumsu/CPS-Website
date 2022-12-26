@@ -4,12 +4,6 @@ import Image from "next/image"
 import EventCard from './EventCard'
 
 export default function EventCards({ events }) {
-  const tagColor = {
-    '比賽': '#E5A0A0',
-    '工作坊': '#7AC2B1',
-    '分享會': '#FFA430',
-  }
-
   const motions = {
     hidden: {
       y: 600,
@@ -33,7 +27,7 @@ export default function EventCards({ events }) {
               return (
                 <motion.li key={event.id} className="shrink-0 snap-center" variants={motions}>
                   <Link href="#">
-                    <EventCard event={event} tagColor={tagColor} width={280}/>
+                    <EventCard event={event} width={270}/>
                   </Link>
                 </motion.li>
               )
@@ -44,7 +38,7 @@ export default function EventCards({ events }) {
               <p className="md:hidden text-2xl">個Server好似迷咗路，<br/>一陣再試下啦！</p>
               <p className="hidden md:block text-4xl">個Server好似迷咗路，一陣再試下啦！</p>
             </div>
-            <Image src={'/404.png'} className="object-cover" width={500} height={350} />
+            <Image src={'/404.png'} className="object-cover" width={500} height={350} alt={"404 Image"}/>
           </motion.div>
       }
     </div>
