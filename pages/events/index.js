@@ -5,3 +5,7 @@ export default function index() {
     <div className='h-screen snap-start'>index</div>
   )
 }
+
+// export async function getStaticProps() {
+//     return
+// }

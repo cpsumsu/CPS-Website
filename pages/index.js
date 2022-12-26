@@ -7,6 +7,8 @@ import JoinUs from '../components/section/JoinUs'
 import ContactUs from '../components/section/ContactUs'
 import Divider from '../components/section/Divider'
 
+import EventUtils from '../utils/EventUtils'
+
 
 export default function Home(props) {
   const carousel = [
@@ -68,14 +70,14 @@ export default function Home(props) {
   </>)
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const API_URL = process.env.EVENT_API_URL;
   let events;
 
   try {
     let raw = await fetch(API_URL);
     raw = await raw.json();
-    events = shapeData(raw.data);
+    events = EventUtils.shapeData(raw.data);
   }
   catch {
     events = null;
@@ -87,35 +89,4 @@ export async function getStaticProps(context) {
     },
     revalidate: 60 * 30, // Re-generate the page every 30 mins
   };
-}
-
-function shapeData (events) {
-  return events.map(event => {
-    const leader = concateArrayWithNullCheck([event.leaders, event.organizers]);
-    const date = new Date(event.date).toLocaleDateString('en-us', {day: "numeric", month: "short", year:"numeric"});
-
-    return {
-      ...event,
-      type: event.event_type,
-      leader: leader,
-      imageUrl: event.image,
-      date: date
-    };
-  })
-}
-
-function concateArrayWithNullCheck(param) {
-  let newArray = new Array();
-
-  param.forEach(array => {
-    if (!array) return;
-
-    newArray = newArray.concat(array);
-  });
-
-  return newArray.length
-    ?  newArray.map(leader => {
-        return leader.name;
-      }).join(', ')
-    : null
 }
