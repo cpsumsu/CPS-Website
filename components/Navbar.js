@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import Link from 'next/link';
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 export default function Navbar({darkMode, handleThemeToggle}) {
@@ -45,14 +46,15 @@ export default function Navbar({darkMode, handleThemeToggle}) {
     }
   };
 
-  const mobileMenuItems = [
+  const menuItems = [
     {id: 0, name: '公告', url: ''},
-    {id: 1, name: '活動', url: ''},
+    {id: 1, name: '活動', url: '/events'},
     {id: 2, name: '關於我們', url: ''},
   ];
 
   const [themeBtnPressed, setThemeBtnPressed] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     let menuHandler = (e) => {
@@ -79,18 +81,18 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           <motion.div className='flex items-center space-x-4'
             initial="hidden" animate="visible" variants={leftMotions} transition={{duration: 1.5}}
           >
-            <Image src={'/icons/logo.svg'} alt="Logo" className="active:scale-105 cursor-pointer" width={40} height={40} priority={true}/>
-            <a className="hidden md:block lg:hidden text-3xl text-white font-mono cursor-pointer">CPSUMSU</a>
-            <a className="hidden lg:block text-2xl text-white font-bold font-mono self-end cursor-pointer select-none active:scale-[102%]">澳門大學電腦學會</a>
+            <Image onClick={() => router.push('/')} src={'/icons/logo.svg'} alt="Logo" className="active:scale-105 cursor-pointer" width={40} height={40} priority={true}/>
+            <Link href={'/'} className="hidden md:block lg:hidden text-3xl text-white font-mono cursor-pointer">CPSUMSU</Link>
+            <Link href={'/'} className="hidden lg:block text-2xl text-white font-bold font-mono self-end cursor-pointer select-none active:scale-[102%]">澳門大學電腦學會</Link>
           </motion.div>
 
           <motion.div className='flex items-center space-x-8'
             initial="hidden" animate="visible" variants={rightMotions} transition={{duration: 1.5}}
           >
             <ul className='hidden md:flex space-x-6'>
-              <li><Link href="#" className='text-lg text-white font-bold hover:text-gray-200'>公告</Link></li>
-              <li><Link href="#" className='text-lg text-white font-bold hover:text-gray-200'>活動</Link></li>
-              <li><Link href="#" className='text-lg text-white font-bold hover:text-gray-200'>關於我們</Link></li>
+              {menuItems.map(item => (
+                <li><Link href={item.url} className="text-lg text-white font-bold hover:text-gray-200">{item.name}</Link></li>
+              ))}
             </ul>
 
           {/* Theme Toggler For Beyond Mobile Screen */}
@@ -122,12 +124,12 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           <aside className={`md:hidden absolute top-[70px] z-50 right-8 w-1/2 bg-white rounded-sm drop-shadow-md ${showMenu ? 'menu-active' : 'menu-hidden'}`}>
             <div className="flex justify-center menu">
               <ul className='text-center w-full cursor-pointer py-1'>
-                {mobileMenuItems.map(item => 
-                  <li key={item.id} className="py-3 active:bg-gray-300 font-bold">
-                    <Link href={item.url}>
-                      {item.name}
-                    </Link>
-                  </li>
+                {menuItems.map(item => 
+                  <Link href={item.url}>
+                    <li key={item.id} className="py-3 active:bg-gray-300 font-bold">
+                        {item.name}
+                    </li>
+                  </Link>
                 )}
               </ul>
             </div>
