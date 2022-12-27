@@ -26,9 +26,7 @@ export default function EventCards({ events }) {
             {events.map(event => {
               return (
                 <motion.li key={event.id} className="shrink-0 snap-center" variants={motions}>
-                  <Link href="#">
-                    <EventCard event={event} width={270}/>
-                  </Link>
+                  <EventCard event={event} width={270}/>
                 </motion.li>
               )
             })}

@@ -50,9 +50,7 @@ export default function AllEvents({events}) {
               {events.map(event => {
                 return (
                   <motion.li key={event.id} className="snap-center" variants={Cardmotions}>
-                    <Link href="#" className="w-fit">
-                      <EventCard event={event} width={270}/>
-                    </Link>
+                    <EventCard event={event} width={270}/>
                   </motion.li>
                 )
               })}

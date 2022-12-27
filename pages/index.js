@@ -19,6 +19,8 @@ export default function HomePage(props) {
     {id: 3, title: "勞逸結合", description: "除了提升能力外，學會亦定期舉辦各種活動來讓各同學得到放鬆並且促進成員之間的溝通。", alt: "勞逸結合", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-3.jpg"},
   ];
 
+  const { events } = props;
+
   return (<>
     <Head>
       <title>CPS UMSU</title>
@@ -39,7 +41,7 @@ export default function HomePage(props) {
       <Divider />
 
       <section id="event" className='snap-end md:px-0 md:max-w-[1400px] mx-auto min-h-screen flex items-center'>
-        <Events events={props.events}/>
+        <Events events={events}/>
       </section>
 
       <Divider />

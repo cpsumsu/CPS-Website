@@ -1,4 +1,5 @@
 import BlurImage from "./BlurImage"
+import { useRouter } from "next/router"
 
 export default function EventCard({event, width}) {
   const EMPTY = '\u00A0';
@@ -8,8 +9,10 @@ export default function EventCard({event, width}) {
     '分享會': '#FFA430',
   }
 
+  const router = useRouter();
+
   return (
-    <div className='relative rounded-lg shadow-lg dark:shadow-md dark:shadow-slate-800 overflow-hidden md:hover:scale-[105%] md:hover:shadow-md duration-300' style={{width: `${width}px`}}>
+    <div onClick={() => router.push(`/events/${event.id}`)} className='relative rounded-lg shadow-lg dark:shadow-md dark:shadow-slate-800 overflow-hidden cursor-pointer md:hover:scale-[105%] md:hover:shadow-md duration-300' style={{width: `${width}px`}}>
       <BlurImage src={event.imageUrl} width={width} height={300} alt={event.name}/>
       {/* Card Content */}
       <div className="px-4 py-4 space-y-1 bg-white dark:bg-cardDark duration-300">
