@@ -33,19 +33,16 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
     const events = await EventUtils.getAllEvents();
 
-    let paths;
-
-    try {
-        paths = events.map(event => ({
-            params: { eid: `${event.id}` }
-        }));
-    }
-    catch {
+    if (!events) {
         return {
             paths: [],
             fallback: 'blocking'
         };
     }
+
+    const paths = events.map(event => ({
+        params: { eid: `${event.id}` }
+    }));
 
     return {
         paths: paths,
