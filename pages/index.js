@@ -11,7 +11,7 @@ import ScrollToTop from '../components/ScrollToTop'
 import EventUtils from '../utils/EventUtils'
 
 
-export default function Home(props) {
+export default function HomePage(props) {
   const carousel = [
     {id: 0, title: "科普推廣", description: "致力舉辦工作坊，用簡單易懂的教學方式讓沒有相關基礎的同學也可以參與。再輔以實際操作，小白也能輕鬆上手。", alt: "科普推廣", imgURL: "https://cpsumsu.org/static/image/slideshow/slideshow_p3.jpg"},
     {id: 1, title: "培養人才", description: "通過比賽及工作坊等活動，提高同學各方面的能力，了解行業的發展，進而提升競爭力。", alt: "培養人才", imgURL: "https://cpsumsu.org/album/photo/cpsumsu-6.jpg"},
@@ -65,10 +65,11 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const API_URL = process.env.EVENT_API_URL;
+  const LIMIT_QUERY = `?limit=${6}`;
   let events;
 
   try {
-    let raw = await fetch(API_URL);
+    let raw = await fetch(API_URL + LIMIT_QUERY);
     raw = await raw.json();
     events = EventUtils.shapeData(raw.data);
   }

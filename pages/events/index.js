@@ -3,7 +3,7 @@ import ScrollToTop from '../../components/ScrollToTop'
 
 import EventUtils from '../../utils/EventUtils'
 
-export default function index(props) {
+export default function AllEventPage(props) {
 
 	return (
 		<main className='w-full snap-start mx-auto min-h-screen theme-toggle'>
