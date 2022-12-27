@@ -14,22 +14,12 @@ export default function AllEventPage(props) {
 }
 
 export async function getStaticProps() {
-	const API_URL = process.env.EVENT_API_URL;
-	let events;
-
-	try {
-		let raw = await fetch(API_URL);
-		raw = await raw.json();
-		events = EventUtils.shapeData(raw.data);
-	}
-	catch {
-		events = null;
-	}
+	const events = await EventUtils.getAllEvents();
 
 	return {
 		props: {
 			events: events,
 		},
-		// revalidate: 60 * 30, // Re-generate the page every 30 mins
+		revalidate: 60 * 30, // Re-generate the page every 30 mins
 	};
 }
