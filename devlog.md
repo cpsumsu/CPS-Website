@@ -1,3 +1,14 @@
+### 2022.12.26
+[Coding]
+
+- Add try catch for fetching API
+- Display error message when not able to fetch Event data
+- Fix some issues on the Event Card Responsiveness
+- Add All Events Page
+- Add Scroll to Top when switching pages
+
+---
+
 ### 2022.12.25
 [Coding]
 
