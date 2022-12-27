@@ -6,6 +6,7 @@ import Vision from '../components/section/Vision'
 import JoinUs from '../components/section/JoinUs'
 import ContactUs from '../components/section/ContactUs'
 import Divider from '../components/section/Divider'
+import ScrollToTop from '../components/ScrollToTop'
 
 import EventUtils from '../utils/EventUtils'
 
@@ -26,6 +27,7 @@ export default function Home(props) {
         </Head>
 
         <main className='theme-toggle'>
+          <ScrollToTop />
           <section id="carousel" className='h-screen snap-start'>
             <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
           </section>

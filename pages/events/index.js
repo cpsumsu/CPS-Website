@@ -1,11 +1,13 @@
-import React from 'react'
 import AllEvents from '../../components/event/AllEvents'
+import ScrollToTop from '../../components/ScrollToTop'
 
 import EventUtils from '../../utils/EventUtils'
 
 export default function index(props) {
+
 	return (
 		<main className='w-full snap-start mx-auto min-h-screen theme-toggle'>
+			<ScrollToTop />
 			<AllEvents events={props.events}/>
 		</main>
 	)
