@@ -58,24 +58,24 @@ export default function AllEvents({events}) {
   }
 
   return (
-    <motion.div className='w-full py-36 space-y-2 md:max-w-[1400px] mx-auto px-8 md:px-20'
+    <motion.div className='w-full py-36 space-y-8 md:max-w-[1400px] mx-auto px-8 md:px-20'
       // initial="hidden"
       // whileInView="visible"
       // viewport={{once: true, amount: 1}}
       // transition={{staggerChildren: 0.15}}
     >
-      <motion.div className="flex justify-between items-baseline" variants={motions}>
-        <h2 className='text-xl md:text-3xl font-bold dark:text-white duration-300'>{selectedType}</h2>
+      <motion.div className="space-y-2" variants={motions}>
+        <h2 className='text-xl md:text-4xl font-bold dark:text-white duration-300'>活動頁面 &#187; {selectedType}</h2>
         {/* <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link> */}
-      </motion.div>
       <EventTypeFilter eventTypes={eventTypes} setSelectedType={setSelectedType}/>
-      <div className="pt-6 flex justify-center w-full scrollbar-none">
+      </motion.div>
+      <div className="flex justify-center w-full scrollbar-none">
         {
           filteredEvents
-          ? <ul className='w-full flex flex-col md:flex-row justify-between flex-wrap gap-x-2 gap-y-12'>
+          ? <ul className='flex flex-col md:w-full md:flex-row justify-between flex-wrap gap-x-2 gap-y-12'>
               {filteredEvents.map(event => {
                 return (
-                  <motion.li key={event.id} className="snap-center" variants={Cardmotions}>
+                  <motion.li layout key={event.id} className="snap-center" variants={Cardmotions}>
                     <EventCard event={event} width={270}/>
                   </motion.li>
                 )
