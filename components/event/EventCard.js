@@ -1,13 +1,10 @@
 import BlurImage from "./BlurImage"
 import { useRouter } from "next/router"
 
+import { tagColors } from "../../data/event"
+
 export default function EventCard({event, width}) {
   const EMPTY = '\u00A0';
-  const tagColor = {
-    '比賽': '#E5A0A0',
-    '工作坊': '#7AC2B1',
-    '分享會': '#FFA430',
-  }
 
   const router = useRouter();
 
@@ -16,7 +13,7 @@ export default function EventCard({event, width}) {
       <BlurImage src={event.imageUrl} width={width} height={300} alt={event.name}/>
       {/* Card Content */}
       <div className="px-4 py-4 space-y-1 bg-white dark:bg-cardDark duration-300">
-        <p className="inline-block text-sm font-bold text-white px-2 py-1 rounded-md" style={{backgroundColor: tagColor[event.type]}}>{event.type}</p>
+        <p className="inline-block text-sm font-bold text-white px-2 py-1 rounded-md" style={{backgroundColor: tagColors[event.type]}}>{event.type}</p>
         <p className="text-lg font-bold dark:text-white truncate duration-300">{event.name}</p>
         <p className="text-sm font-semibold text-neutral-400 truncate">{event.leader ?? EMPTY}</p>
       </div>

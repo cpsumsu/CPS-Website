@@ -1,7 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import EventTypeFilter from "./EventTypeFilter"
 import EventCard from "./EventCard"
+
+import { eventTypes } from "../../data/event"
+
 
 export default function AllEvents({events}) {
   const motions = {
@@ -33,7 +37,7 @@ export default function AllEvents({events}) {
   }
 
   return (
-    <motion.div className='w-full py-36 space-y-12 md:max-w-[1400px] mx-auto px-8 md:px-20'
+    <motion.div className='w-full py-36 space-y-4 md:max-w-[1400px] mx-auto px-8 md:px-20'
       // initial="hidden"
       // whileInView="visible"
       // viewport={{once: true, amount: 1}}
@@ -43,6 +47,7 @@ export default function AllEvents({events}) {
         <h2 className='text-xl md:text-3xl font-bold dark:text-white duration-300'>全部活動</h2>
         {/* <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link> */}
       </motion.div>
+      <EventTypeFilter eventTypes={eventTypes}/>
       <div className="flex justify-center w-full scrollbar-none">
         {
           events

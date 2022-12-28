@@ -1,14 +1,9 @@
 import React from 'react'
 
 import BlurImage from './BlurImage'
+import { tagColors } from "../../data/event"
 
 export default function EventDetail({ event }) {
-    const tagColor = {
-        '比賽': '#E5A0A0',
-        '工作坊': '#7AC2B1',
-        '分享會': '#FFA430',
-    }
-
     return (
         <div className='w-full py-36 space-y-12 md:max-w-[1400px] mx-auto px-8 md:px-20'>
             {/* Flex Wrapper */}
@@ -19,7 +14,7 @@ export default function EventDetail({ event }) {
                     {/* Event Type and Date */}
                     <div className="flex items-center gap-x-1 text-[#6e6e6e] dark:text-gray-400 font-bold theme-toggle-transition">
                         <p className="inline-block text-sm text-white px-2 py-1 rounded-xl"
-                        style={{backgroundColor: tagColor[event.event_type]}}>
+                        style={{backgroundColor: tagColors[event.event_type]}}>
                                 {event.event_type}
                         </p>
                         <p className=''>-</p>
