@@ -46,7 +46,7 @@ export default function AllEvents({events}) {
       <div className="flex justify-center w-full scrollbar-none">
         {
           events
-          ? <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12'>
+          ? <ul className='flex flex-col md:flex-row justify-between flex-wrap gap-x-2 gap-y-12'>
               {events.map(event => {
                 return (
                   <motion.li key={event.id} className="snap-center" variants={Cardmotions}>
