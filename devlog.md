@@ -1,3 +1,14 @@
+### 2022.12.27
+[Coding]
+
+- Rename Pages
+- Group the getDate methods into an EventUtils Class
+- Add Event Detail Page
+- Event Detail Page is running dynamic routes w/ `getStaticProps`
+- Add error handling, redirect to 404 when Event not exists
+
+---
+
 ### 2022.12.26
 [Coding]
 
