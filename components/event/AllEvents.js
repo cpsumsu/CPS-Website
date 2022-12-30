@@ -3,9 +3,10 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { eventTypes } from "../../data/event"
-import EventUtils from "../../utils/EventUtils";
+import EventUtils from "../../utils/EventUtils"
 import EventCard from "./EventCard"
 import EventTypeFilter from "./EventTypeFilter"
+import Spinner from "../status/Spinner"
 
 export default function AllEvents(props) {
   const motions = {
@@ -64,7 +65,6 @@ export default function AllEvents(props) {
   }, [selectedType, events])
 
   useEffect(() => {
-    console.log("PAGE_NAME", currentPageNum);
     if (!isFetching || !hasMore) return;
 
     fetchEvents();
@@ -88,7 +88,7 @@ export default function AllEvents(props) {
 
       setIsFetching(true);
       setCurrentPageNum(prev => prev += 1);
-    }, 1000);
+    }, 50);
 
   })
 
@@ -111,11 +111,15 @@ export default function AllEvents(props) {
 
     setIsFetching(false);
 
+    const scrollEl = document.getElementById('scroll');
+
     if (meta.current_page === meta.last_page) {
       setHasMore(false);
+      setIsFetching(false);
+      scrollEl.removeEventListener('scroll', handleScroll);
       return;
     }
-    const scrollEl = document.getElementById('scroll');
+
     scrollEl.addEventListener('scroll', handleScroll);
   }, [currentPageNum])
 
@@ -129,22 +133,31 @@ export default function AllEvents(props) {
       <motion.div className="space-y-2" variants={motions}>
         <h2 className='text-xl md:text-4xl font-bold dark:text-white duration-300'>活動頁面 &#187; {selectedType}</h2>
         {/* <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link> */}
-        <EventTypeFilter eventTypes={eventTypes} setSelectedType={setSelectedType} />
+        { filteredEvents && <EventTypeFilter eventTypes={eventTypes} setSelectedType={setSelectedType} /> }
       </motion.div>
-      <div className="flex flex-col justify-center w-full scrollbar-none">
+      <div className="relative flex flex-col justify-center w-full scrollbar-none">
         {
           filteredEvents
             ? <>
               <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-14 gap-y-12'>
                 {filteredEvents.map(event => {
                   return (
-                    <li key={event.id} className="snap-center">
+                    <motion.li layout key={event.id} className="snap-center">
                       <EventCard event={event} width={270} />
-                    </li>
+                    </motion.li>
                   )
                 })}
               </ul>
-              {/* {isFetching && <p>Loading</p>} */}
+              {(isFetching && hasMore) && 
+                <div className="absolute w-full flex justify-center bottom-0 translate-y-[200%]">
+                  <Spinner />
+                </div>
+              }
+              {!hasMore &&
+                <div className="absolute w-full flex justify-center bottom-0 translate-y-[200%]">
+                  <p className="text-lg font-bold text-navbarDark dark:text-gray-300">無晒活動啦</p>
+                </div>
+              }
             </>
             : <motion.div className="flex flex-col items-center gap-y-4 h-full my-8 px-8 text-center animate-wiggle" variants={cardMotions}>
               <div className="text-navbarDark dark:text-sky-200 backdrop-blur-md">
