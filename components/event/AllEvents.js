@@ -135,11 +135,11 @@ export default function AllEvents(props) {
         {/* <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link> */}
         { filteredEvents && <EventTypeFilter eventTypes={eventTypes} setSelectedType={setSelectedType} /> }
       </motion.div>
-      <div className="relative flex flex-col justify-center w-full scrollbar-none">
+      <div className="relative flex flex-col justify-center w-full">
         {
           filteredEvents
             ? <>
-              <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-14 gap-y-12'>
+              <ul className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-14 gap-y-12'>
                 {filteredEvents.map(event => {
                   return (
                     <motion.li layout key={event.id} className="snap-center">

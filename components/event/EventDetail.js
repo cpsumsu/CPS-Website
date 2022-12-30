@@ -7,10 +7,10 @@ export default function EventDetail({ event }) {
     return (
         <div className='w-full py-36 space-y-12 md:max-w-[1400px] mx-auto px-8 md:px-20'>
             {/* Flex Wrapper */}
-            <div className="flex flex-col lg:flex-row lg:justify-between">
+            <div className="flex flex-col space-y-4 md:space-y-0 lg:flex-row lg:justify-between">
                 {/* Left Container - Event Details */}
                 <div className="lg:w-2/3 flex flex-col flex-shrink lg:pr-[10%] gap-y-2 ">
-                    <h1 className='text-4xl font-bold text-black dark:text-white theme-toggle-transition'>{event.name}</h1>
+                    <h1 className='text-2xl md:text-4xl font-bold text-black dark:text-white theme-toggle-transition'>{event.name}</h1>
                     {/* Event Type and Date */}
                     <div className="flex items-center gap-x-1 text-[#6e6e6e] dark:text-gray-400 font-bold theme-toggle-transition">
                         <p className="inline-block text-sm text-white px-2 py-1 rounded-xl"
@@ -21,7 +21,7 @@ export default function EventDetail({ event }) {
                         <p className=''>活動日期: &nbsp;</p>
                         <p>{event.date}</p>
                     </div>
-                    <div className='pt-6 text-base lg:text-lg tracking-widest indent-8 dark:text-gray-300 theme-toggle-transition' dangerouslySetInnerHTML={{__html: event.content}}></div>
+                    <div className='pt-2 md:pt-6 text-base lg:text-lg tracking-widest indent-8 dark:text-gray-300 theme-toggle-transition' dangerouslySetInnerHTML={{__html: event.content}}></div>
                 </div>
 
                 {/* Right Container - Event Poster */}
