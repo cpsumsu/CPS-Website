@@ -1,3 +1,16 @@
+### 2022.12.30
+[Coding]
+
+Have try various approaches for infinite scrolling in all event page, like the `react-infinite-scroll-component` and `react-infinite-scroller`. However, probably my scrolling part is not in body tag but in a nested div, thus they're not working solution. I should go for intersection observer. But for simplicity I used `innerHeight`, `scrollTop`, and `scrollHeight` instead.
+
+- Add infinite scrolling in all event page
+- Clear up all the console.log across files
+- Add a spinner when fetching data
+- update the Links' href
+- Update some responsiveness on mobile in all event page
+
+---
+
 ### 2022.12.28
 [Coding]
 
