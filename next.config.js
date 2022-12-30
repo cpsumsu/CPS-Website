@@ -8,7 +8,7 @@ const nextConfig = {
         hostname: 'cpsumsu.org',
       },
       {
-        protocol: 'https',
+        protocol: 'http',
         hostname: process.env.IMAGE_HOSTNAME,
       }
     ]

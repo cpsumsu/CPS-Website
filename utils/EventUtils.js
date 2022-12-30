@@ -23,8 +23,6 @@ export default class EventUtils {
 		const API_URL = process.env.NEXT_PUBLIC_EVENT_API_URL;
 		let events, meta;
 
-		console.log(`${API_URL}?page=${page_num}`);
-
 		try {
 			let raw = await fetch(`${API_URL}?page=${page_num}`);
 			raw = await raw.json();

@@ -84,8 +84,6 @@ export default function AllEvents(props) {
 
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      console.log("Scrolled to end");
-
       if (isFetching) return;
 
       setIsFetching(true);
@@ -99,13 +97,8 @@ export default function AllEvents(props) {
     try {
       const data = await EventUtils.getAllEvents(currentPageNum, true);
 
-      console.log(data);
-
       newEvents = data.events;
       meta = data.meta;
-
-      console.log(meta);
-      console.log(meta.current_page);
     }
     catch {
       setHasMore(false);
@@ -114,14 +107,11 @@ export default function AllEvents(props) {
 
     if (!newEvents) return;
 
-    console.log("append events");
-
     setEvents(prev => [...prev, ...newEvents]);
 
     setIsFetching(false);
 
     if (meta.current_page === meta.last_page) {
-      console.log("last Page");
       setHasMore(false);
       return;
     }

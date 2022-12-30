@@ -26,7 +26,6 @@ export default function Carousel({carousel, width, maxWidth="none", height}) {
     progressBarInterval.current = setInterval(() => {
       count += (1 / (duration * 1000 / PER_MS)) * 100;
       setProgressBar(count);
-      // console.log(count);
       if (count >= 100) {
         setTimeout(() => {
           setProgressBar(0);
