@@ -19,18 +19,24 @@ export default class EventUtils {
 		return events;
 	}
 
-	static async getAllEvents() {
-		const API_URL = process.env.EVENT_API_URL;
-		let events;
+	static async getAllEvents(page_num = 1, show_meta = false) {
+		const API_URL = process.env.NEXT_PUBLIC_EVENT_API_URL;
+		let events, meta;
+
+		console.log(`${API_URL}?page=${page_num}`);
 
 		try {
-			let raw = await fetch(API_URL);
+			let raw = await fetch(`${API_URL}?page=${page_num}`);
 			raw = await raw.json();
 			events = this.shapeData(raw.data);
+			meta = raw.meta;
 		}
 		catch {
 			events = null;
+			meta = null;
 		}
+
+		if (show_meta) return {events, meta};
 
 		return events;
 	}
