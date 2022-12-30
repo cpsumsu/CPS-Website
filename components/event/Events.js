@@ -26,7 +26,7 @@ export default function Events({events}) {
     >
       <motion.div className="flex justify-between items-baseline px-8 md:px-20" variants={motions}>
         <h2 className='text-xl md:text-3xl font-bold dark:text-white duration-300'>最近活動</h2>
-        <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link>
+        <Link href="/events" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link>
       </motion.div>
       <div className="flex w-full overflow-y-scroll scrollbar-none snap-x snap-mandatory">
         <EventCards events={events} />

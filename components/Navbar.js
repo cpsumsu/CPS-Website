@@ -49,7 +49,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
   const menuItems = [
     {id: 0, name: '公告', url: ''},
     {id: 1, name: '活動', url: '/events'},
-    {id: 2, name: '關於我們', url: ''},
+    {id: 2, name: '關於我們', url: '/#intro'},
   ];
 
   const [themeBtnPressed, setThemeBtnPressed] = useState(false);

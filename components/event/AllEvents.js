@@ -130,7 +130,7 @@ export default function AllEvents(props) {
     // viewport={{once: true, amount: 1}}
     // transition={{staggerChildren: 0.15}}
     >
-      <motion.div className="space-y-2" variants={motions}>
+      <motion.div className="space-y-2">
         <h2 className='text-xl md:text-4xl font-bold dark:text-white duration-300'>活動頁面 &#187; {selectedType}</h2>
         {/* <Link href="#" className='text-sm md:text-xl font-bold text-neutral-500 dark:text-neutral-300 hover:text-neutral-700 duration-300'>查看更多<span>&rarr;</span></Link> */}
         { filteredEvents && <EventTypeFilter eventTypes={eventTypes} setSelectedType={setSelectedType} /> }
