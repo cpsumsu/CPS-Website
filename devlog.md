@@ -1,3 +1,13 @@
+### 2022.12.28
+[Coding]
+
+- Testing the all event page between grid layout and flex
+- Refactor some constant value of events into a data class
+- Add Filtering function for all event page
+- Add layout animation in-n-out when event get filtered
+
+---
+
 ### 2022.12.27
 [Coding]
 
