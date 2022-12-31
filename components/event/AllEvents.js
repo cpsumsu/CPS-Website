@@ -117,7 +117,7 @@ export default function AllEvents(props) {
 
     const scrollEl = document.getElementById('scroll');
 
-    if (meta.current_page === meta.last_page) {
+    if (meta.current_page >= meta.last_page) {
       setHasMore(false);
       setIsFetching(false);
       scrollEl.removeEventListener('scroll', handleScroll);
