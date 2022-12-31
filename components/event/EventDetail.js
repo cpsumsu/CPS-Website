@@ -1,6 +1,7 @@
 import React from 'react'
 
 import BlurImage from './BlurImage'
+import LatestEvents from './LatestEvents'
 import { tagColors } from "../../data/event"
 
 export default function EventDetail({ event }) {
@@ -36,6 +37,9 @@ export default function EventDetail({ event }) {
             <div className='mx-auto theme-toggle-transition'>
                 <div className="bg-gray-200 h-2 w-full rounded-full dark:bg-description theme-toggle-transition" />
             </div>
+
+            {/* Latest Events Section */}
+            <LatestEvents />
         </div>
     )
 }

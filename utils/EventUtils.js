@@ -3,7 +3,7 @@ import html from 'remark-html'
 
 export default class EventUtils {
 	static async getEvents(limit_num = 4) {
-		const API_URL = process.env.EVENT_API_URL;
+		const API_URL = process.env.NEXT_PUBLIC_EVENT_API_URL;
 		const query_string = `?limit=${limit_num}`;
 		let events;
 
@@ -40,7 +40,7 @@ export default class EventUtils {
 	}
 
 	static async getEventDetails(id) {
-		const API_URL = process.env.EVENT_API_URL;
+		const API_URL = process.env.NEXT_PUBLIC_EVENT_API_URL;
 		const query_string = `/${id}`;
 
 		let event;
