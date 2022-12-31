@@ -1,3 +1,14 @@
+### 2022.12.31
+[Coding]
+
+Almost finish the whole website, besides the announcement page, has no clue what to put inside so far.
+- Fix the first fetch in all event page when there's no second page from the API
+- Add a latest section under the event detail
+- Add click effect on event card on mobile
+- Storing the light theme into localStorage
+
+---
+
 ### 2022.12.30
 [Coding]
 
