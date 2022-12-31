@@ -105,7 +105,11 @@ export default function AllEvents(props) {
       return;
     }
 
-    if (!newEvents) return;
+    if (!newEvents) {
+      setIsFetching(false);
+      setHasMore(false);
+      return;
+    };
 
     setEvents(prev => [...prev, ...newEvents]);
 
