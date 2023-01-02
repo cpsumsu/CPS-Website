@@ -35,7 +35,7 @@ export default function Header({carousel, currentIndex}) {
   return (
     <motion.div key={carousel[currentIndex].id} className="absolute top-1/3 px-8 md:px-20 left-0 right-0 z-50 space-y-4 width-wrapper"
       initial="hidden" animate="visible" variants={firstEntered ? titleMotions : motions} transition={{
-        delay: 1.5,
+        delay: 0.5,
         duration: 1
       }}>
         <motion.h1 className='text-4xl md:text-5xl lg:text-7xl font-bold text-white'>{carousel[currentIndex].title}</motion.h1>

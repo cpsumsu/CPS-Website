@@ -7,9 +7,9 @@ import { motion } from 'framer-motion'
 export default function Navbar({darkMode, handleThemeToggle}) {
   const leftMotions = {
     hidden: {
-      x: -500,
+      x: -200,
       opacity: 0.6,
-      scale: 0.4
+      scale: 0.2
     },
     visible: {
       x: 0,
@@ -20,7 +20,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
 
   const rightMotions = {
     hidden: {
-      x: 500,
+      x: 200,
       opacity: 0.6,
       scale: 0.4
     },
@@ -40,7 +40,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
       y: 0,
       opacity: 1,
       transition: {
-        delay: 3,
+        delay: 1.5,
         duration: 1,
       }
     }
@@ -79,7 +79,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
       <div className="relative bg-navbar py-5 dark:bg-navbarDark shadow-lg theme-toggle-transition">
         <div className="w-full flex justify-between items-center h-12 width-wrapper px-8 md:px-20">
           <motion.div className='flex items-center space-x-4'
-            initial="hidden" animate="visible" variants={leftMotions} transition={{duration: 1.5}}
+            initial="hidden" animate="visible" variants={leftMotions} transition={{duration: 1}}
           >
             <Image onClick={() => router.push('/')} src={'/icons/logo.svg'} alt="Logo" className="active:scale-105 cursor-pointer" width={40} height={40} priority={true}/>
             <Link href={'/'} className="hidden md:block lg:hidden text-3xl text-white font-mono cursor-pointer">CPSUMSU</Link>
@@ -87,7 +87,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           </motion.div>
 
           <motion.div className='flex items-center space-x-8'
-            initial="hidden" animate="visible" variants={rightMotions} transition={{duration: 1.5}}
+            initial="hidden" animate="visible" variants={rightMotions} transition={{duration: 1}}
           >
             <ul className='hidden md:flex space-x-6'>
               {menuItems.map(item => (
