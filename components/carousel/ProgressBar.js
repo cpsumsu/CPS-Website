@@ -14,7 +14,7 @@ export default function ProgressBar({item, currentIndex, progressBar, clickHandl
 
   return (
     <motion.li key={item.id} onClick={() => clickHandler(item.id)} className={`col-span-1 w-full cursor-pointer group disable-mobile-press-highlight`}
-    variants={childMotions} transition={{duration: 1, delay: 0.8 + 0.1 * (item.id)}}>
+    variants={childMotions} transition={{duration: 1, delay: 1.3 + 0.1 * (item.id)}}>
       <h3 className={`text-lg md:text-2xl font-bold group-hover:text-white ${currentIndex === item.id ? 'text-white' : 'text-gray-400'}`}>{item.title}</h3>
       <div className={`w-full h-1 md:h-2 bg-neutral-500 transition duration-200 overflow-hidden`}>
         {
