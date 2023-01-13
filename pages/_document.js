@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head />
-      <body id="scroll" className='h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden'>
+      <body>
         <Main />
         <NextScript />
       </body>

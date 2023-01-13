@@ -25,7 +25,7 @@ export default function Layout(props) {
   }
 
   return (
-    <div className={`h-screen ${darkMode ? 'dark' : ''}`}>
+    <div id='scroll' className={`h-screen overflow-y-scroll overflow-x-hidden ${darkMode ? 'dark' : ''}`}>
         <Navbar darkMode={darkMode} handleThemeToggle={handleThemeToggle}/>
         {props.children}
         <Footer />
