@@ -22,7 +22,7 @@ export default function EventCards({ events }) {
     <div className="w-full h-full">
       { 
         events
-        ? <ul className='flex space-x-8 py-6 before:shrink-0 before:w-8 after:shrink-0 after:w-8 md:before:w-20 md:after:w-20'>
+        ? <ul className='flex overflow-y-hidden overflow-x-auto scrollbar-none space-x-8 py-6 before:shrink-0 before:w-8 after:shrink-0 after:w-8 md:before:w-20 md:after:w-20'>
             {events.map(event => {
               return (
                 <motion.li key={event.id} className="shrink-0 snap-center" variants={motions}>

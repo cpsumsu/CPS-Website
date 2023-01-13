@@ -29,7 +29,7 @@ export default function HomePage(props) {
     </Head>
 
     <main className='theme-toggle'>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <section id="carousel" className='h-screen snap-start'>
         <Carousel carousel={carousel} width={'100%'} height={'100%'}/>
       </section>
