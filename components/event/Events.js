@@ -21,7 +21,7 @@ export default function Events({events}) {
     <motion.div className='w-full space-y-2 md:space-y-16 translate-y-12'
       initial="hidden"
       whileInView="visible"
-      viewport={{once: true, amount: 1}}
+      viewport={{once: true, amount: 0.2}}
       transition={{staggerChildren: 0.15}}
     >
       <motion.div className="flex justify-between items-baseline px-8 md:px-20" variants={motions}>

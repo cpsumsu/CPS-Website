@@ -31,7 +31,7 @@ export default function Vision() {
     <motion.div className="relative space-y-9 z-10 translate-y-12"
       initial="hidden"
       whileInView="visible"
-      viewport={{once: true, amount: 1}}
+      viewport={{once: true, amount: 0.2}}
       transition={{staggerChildren: 0.15}}
     >
       <motion.h2 className="block-title" variants={motions}>願景</motion.h2>
