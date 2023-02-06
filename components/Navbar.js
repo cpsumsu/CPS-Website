@@ -47,9 +47,10 @@ export default function Navbar({darkMode, handleThemeToggle}) {
   };
 
   const menuItems = [
-    {id: 0, name: '公告', url: ''},
-    {id: 1, name: '活動', url: '/events'},
-    {id: 2, name: '關於我們', url: '/#intro'},
+    // {id: 0, name: '公告', url: ''},
+    {id: 1, name: '活動', url: '/events', newTab: false},
+    {id: 2, name: '學習筆記', url: 'https://github.com/cpsumsu/CPS-Workshops', newTab: true},
+    {id: 3, name: '關於我們', url: '/#intro', newTab: false},
   ];
 
   const [themeBtnPressed, setThemeBtnPressed] = useState(false);
@@ -91,7 +92,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
           >
             <ul className='hidden md:flex space-x-6'>
               {menuItems.map(item => (
-                <li key={item.id}><Link href={item.url} className="text-lg text-white font-bold hover:text-gray-200">{item.name}</Link></li>
+                <li key={item.id}><Link href={item.url} target={item.newTab ? "_blank" : "_self"} className="text-lg text-white font-bold hover:text-gray-200">{item.name}</Link></li>
               ))}
             </ul>
 
@@ -125,7 +126,7 @@ export default function Navbar({darkMode, handleThemeToggle}) {
             <div className="flex justify-center menu">
               <ul className='text-center w-full cursor-pointer py-1'>
                 {menuItems.map(item => 
-                  <Link key={item.id} href={item.url}>
+                  <Link key={item.id} href={item.url} target={item.newTab ? "_blank" : "_self"}>
                     <li className="py-3 active:bg-gray-300 font-bold">
                         {item.name}
                     </li>
