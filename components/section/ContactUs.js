@@ -43,7 +43,7 @@ export default function ContactUs() {
     <motion.div className="relative w-full space-y-20 z-10"
       initial="hidden"
       whileInView="visible"
-      viewport={{once: true, amount: 0.2}}
+      viewport={{once: true, amount: 0}}
       transition={{staggerChildren: 0.15}}
     >
       <motion.h2 className="block-title" variants={motions}>歡迎聯絡我們</motion.h2>

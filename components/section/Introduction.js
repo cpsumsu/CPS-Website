@@ -32,7 +32,7 @@ export default function Introduction() {
     <motion.div className="relative space-y-9 z-10 translate-y-12"
       initial="hidden"
       whileInView="visible"
-      viewport={{once: true, amount: 0.2}}
+      viewport={{once: true, amount: 0}}
       transition={{staggerChildren: 0.2}}
     >
       <motion.h2 className="block-title" variants={motions}>
