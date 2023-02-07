@@ -51,3 +51,7 @@
 .menu-hidden {
     @apply opacity-0 translate-x-full transition duration-300
 }
+
+.fix-ios-radius {
+    -webkit-mask-image: radial-gradient(white, black);
+}
